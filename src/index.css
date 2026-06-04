@@ -9,11 +9,13 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-[#060612] text-white font-sans antialiased;
     letter-spacing: -0.01em;
+    overflow-x: hidden;
     background-color: #060612;
     background-image:
       radial-gradient(ellipse 90% 55% at 50% -5%, rgba(97, 113, 241, 0.18), transparent 70%),
