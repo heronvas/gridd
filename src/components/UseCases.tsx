@@ -17,7 +17,7 @@ export default function UseCases() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section ref={ref} className="py-24 px-4 sm:px-6 lg:px-8 relative">
+    <section ref={ref} className="py-14 lg:py-24 px-4 sm:px-6 lg:px-8 relative">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pink-600/5 rounded-full blur-[120px]" />
       </div>
@@ -27,12 +27,12 @@ export default function UseCases() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 lg:mb-16"
         >
           <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-pink-400 bg-pink-500/10 border border-pink-500/20 mb-4">
             Use Cases
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-5">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-5">
             Real results,{' '}
             <span className="text-gradient">real teams</span>
           </h2>
@@ -42,7 +42,7 @@ export default function UseCases() {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
           {useCases.map((useCase, i) => {
             const color = cardColors[i % cardColors.length]
             return (

@@ -21,7 +21,7 @@ const values = [
 export default function About() {
   return (
     <PageLayout>
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
         {/* Hero */}
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-center mb-20">
           <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 mb-4">About Gridd</span>
@@ -35,7 +35,7 @@ export default function About() {
         </motion.div>
 
         {/* Story */}
-        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.15 }} className="glass rounded-2xl p-8 mb-16 border border-white/[0.06]">
+        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.15 }} className="glass rounded-2xl p-8 mb-10 lg:mb-16 border border-white/[0.06]">
           <div className="grid md:grid-cols-2 gap-10">
             <div>
               <h2 className="text-2xl font-bold text-white mb-4">Our story</h2>

@@ -15,7 +15,7 @@ const sections = [
 export default function Legal() {
   return (
     <PageLayout>
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-12">
           <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-white/50 bg-white/[0.06] border border-white/[0.08] mb-4">Legal</span>
           <h1 className="text-4xl sm:text-5xl font-black tracking-tight mb-4">Terms of Service</h1>

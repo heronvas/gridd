@@ -8,18 +8,18 @@ export default function Problem() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section ref={ref} className="py-24 px-4 sm:px-6 lg:px-8 relative">
+    <section ref={ref} className="py-14 lg:py-24 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 lg:mb-16"
         >
           <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-red-400 bg-red-500/10 border border-red-500/20 mb-4">
             The Problem
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-5">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-5">
             AI tools are{' '}
             <span className="relative">
               <span className="text-white/30 line-through">powerful</span>

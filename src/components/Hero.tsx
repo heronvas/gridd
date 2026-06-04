@@ -87,7 +87,7 @@ function AgentNode({
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-16 overflow-hidden">
+    <section className="relative overflow-x-hidden pt-24 pb-12 lg:min-h-screen lg:flex lg:flex-col lg:items-center lg:justify-center lg:pb-16">
       {/* Background glow orbs */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[120px]" />
@@ -96,7 +96,7 @@ export default function Hero() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left: Text */}
           <motion.div
             variants={containerVariants}
@@ -113,7 +113,7 @@ export default function Hero() {
 
             <motion.h1
               variants={itemVariants}
-              className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-6"
+              className="text-4xl sm:text-5xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-5 lg:mb-6"
             >
               Build AI Teams,{' '}
               <span className="text-gradient block">Not AI Tools.</span>
@@ -121,7 +121,7 @@ export default function Hero() {
 
             <motion.p
               variants={itemVariants}
-              className="text-lg sm:text-xl text-white/50 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-10"
+              className="text-base sm:text-xl text-white/50 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8 lg:mb-10"
             >
               Create, connect, and deploy intelligent AI agents that collaborate
               across sales, support, research, and operations.
@@ -169,7 +169,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
-            className="relative w-full aspect-square max-w-[500px] mx-auto"
+            className="relative w-full aspect-square max-w-[260px] sm:max-w-[360px] lg:max-w-[500px] mx-auto"
             id="platform"
           >
             {/* Outer ring */}

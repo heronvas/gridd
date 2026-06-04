@@ -30,7 +30,7 @@ const result = await agent.run({
 export default function Documentation() {
   return (
     <PageLayout>
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-center mb-16">
           <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-sky-400 bg-sky-500/10 border border-sky-500/20 mb-4">Documentation</span>
           <h1 className="text-5xl sm:text-6xl font-black tracking-tight mb-5">

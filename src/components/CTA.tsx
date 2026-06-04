@@ -8,7 +8,7 @@ export default function CTA() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section ref={ref} className="py-24 px-4 sm:px-6 lg:px-8 relative">
+    <section ref={ref} className="py-14 lg:py-24 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -29,7 +29,7 @@ export default function CTA() {
           <div className="absolute inset-0 rounded-3xl border border-indigo-500/30" />
 
           {/* Content */}
-          <div className="relative z-10 text-center px-8 sm:px-16 py-20">
+          <div className="relative z-10 text-center px-5 sm:px-10 lg:px-16 py-12 sm:py-16 lg:py-20">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -47,7 +47,7 @@ export default function CTA() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.3 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-6"
+              className="text-3xl sm:text-4xl lg:text-6xl font-black tracking-tight mb-5 lg:mb-6"
             >
               Your AI workforce{' '}
               <span className="text-gradient block mt-1">starts on Gridd.</span>

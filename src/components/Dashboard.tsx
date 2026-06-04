@@ -18,7 +18,7 @@ export default function Dashboard() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section ref={ref} className="py-24 px-4 sm:px-6 lg:px-8 relative">
+    <section ref={ref} className="py-14 lg:py-24 px-4 sm:px-6 lg:px-8 relative">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-indigo-600/6 rounded-full blur-[120px]" />
       </div>
@@ -28,12 +28,12 @@ export default function Dashboard() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 lg:mb-16"
         >
           <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-sky-400 bg-sky-500/10 border border-sky-500/20 mb-4">
             Dashboard
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-5">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-5">
             Full visibility,{' '}
             <span className="text-gradient">zero guesswork</span>
           </h2>

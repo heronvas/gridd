@@ -35,7 +35,7 @@ export default function Solution() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section ref={ref} id="agents" className="py-24 px-4 sm:px-6 lg:px-8 relative">
+    <section ref={ref} id="agents" className="py-14 lg:py-24 px-4 sm:px-6 lg:px-8 relative">
       {/* Background glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-600/8 rounded-full blur-[100px]" />
@@ -46,12 +46,12 @@ export default function Solution() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 lg:mb-16"
         >
           <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 mb-4">
             The Solution
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-5">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-5">
             One platform.{' '}
             <span className="text-gradient">Your entire AI workforce.</span>
           </h2>

@@ -29,7 +29,7 @@ export default function Features() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section ref={ref} id="platform" className="py-24 px-4 sm:px-6 lg:px-8 relative">
+    <section ref={ref} id="platform" className="py-14 lg:py-24 px-4 sm:px-6 lg:px-8 relative">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-violet-600/6 rounded-full blur-[100px]" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-600/6 rounded-full blur-[100px]" />
@@ -40,12 +40,12 @@ export default function Features() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 lg:mb-16"
         >
           <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 mb-4">
             Features
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-5">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-5">
             Everything your{' '}
             <span className="text-gradient">AI team needs</span>
           </h2>
@@ -55,7 +55,7 @@ export default function Features() {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {features.map((feature, i) => {
             const colors = iconColors[i % iconColors.length]
             const tagColor = tagColors[feature.tag ?? 'Core']
@@ -65,21 +65,21 @@ export default function Features() {
                 initial={{ opacity: 0, y: 24 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.05 + i * 0.07 }}
-                className="glass rounded-2xl p-5 group hover:border-white/[0.12] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden"
+                className="glass rounded-2xl p-3 sm:p-5 group hover:border-white/[0.12] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden"
               >
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none bg-gradient-to-br from-white/[0.03] to-transparent" />
-                <div className="flex items-start justify-between mb-4">
-                  <div className={`w-9 h-9 rounded-lg flex items-center justify-center ${colors.bg}`}>
-                    <feature.icon size={18} className={colors.icon} />
+                <div className="flex items-start justify-between mb-3">
+                  <div className={`w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex items-center justify-center ${colors.bg}`}>
+                    <feature.icon size={16} className={colors.icon} />
                   </div>
                   {feature.tag && (
-                    <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full border ${tagColor}`}>
+                    <span className={`hidden sm:inline text-[10px] font-semibold px-2 py-0.5 rounded-full border ${tagColor}`}>
                       {feature.tag}
                     </span>
                   )}
                 </div>
-                <h3 className="text-sm font-bold text-white mb-2 leading-snug">{feature.title}</h3>
-                <p className="text-xs text-white/40 leading-relaxed">{feature.description}</p>
+                <h3 className="text-xs sm:text-sm font-bold text-white mb-1.5 leading-snug">{feature.title}</h3>
+                <p className="hidden sm:block text-xs text-white/40 leading-relaxed">{feature.description}</p>
               </motion.div>
             )
           })}

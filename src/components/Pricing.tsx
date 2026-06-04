@@ -22,7 +22,7 @@ export default function Pricing() {
 
   return (
     <>
-      <section ref={ref} id="pricing" className="py-24 px-4 sm:px-6 lg:px-8 relative">
+      <section ref={ref} id="pricing" className="py-14 lg:py-24 px-4 sm:px-6 lg:px-8 relative">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-indigo-600/8 rounded-full blur-[120px]" />
         </div>
@@ -32,12 +32,12 @@ export default function Pricing() {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-10 lg:mb-16"
           >
             <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-amber-400 bg-amber-500/10 border border-amber-500/20 mb-4">
               Pricing
             </span>
-            <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-5">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-5">
               Simple, transparent{' '}
               <span className="text-gradient">pricing</span>
             </h2>
@@ -56,7 +56,7 @@ export default function Pricing() {
                 transition={{ duration: 0.5, delay: 0.1 + i * 0.15 }}
                 className={`relative rounded-2xl p-7 flex flex-col ${
                   plan.highlighted
-                    ? 'bg-indigo-600/20 border-2 border-indigo-500/50 shadow-2xl shadow-indigo-500/20 scale-[1.02]'
+                    ? 'bg-indigo-600/20 border-2 border-indigo-500/50 shadow-2xl shadow-indigo-500/20 md:scale-[1.02]'
                     : 'glass border border-white/[0.08]'
                 }`}
               >

@@ -24,7 +24,7 @@ export default function BlogPost() {
 
   return (
     <PageLayout>
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
         {/* Back */}
         <motion.div initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }}>
           <Link
